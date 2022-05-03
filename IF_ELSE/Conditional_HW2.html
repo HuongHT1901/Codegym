@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tính điểm ĐH khối D</h2>
+    <h3>Môn Toán</h3>
+    <input type="text" id = "math"><br/>
+    <h3>Môn Văn</h3>
+    <input type="text" id = "literature"><br/>
+    <h3>Môn Anh</h3>
+    <input type="text" id = "english"><br/>
+    <h3>Khu vực</h3>
+    <select id="KV">
+        <option value="0.75">KV1</option>
+        <option value="0.5">KV2</option>
+        <option value="0.25">KV2-NT</option>
+        <option value="0">KV3</option>
+    </select>
+    <br/><br/>
+    <button onclick="calPoint()">Tính điểm</button>
+    <h2 style="color: red;">Tổng điểm ĐH khối D của bạn là: <span id="result"></span></h2>
+</body>
+<script>
+    function calPoint() {
+        let Math = parseFloat(document.getElementById("math").value);
+        let Lit = parseFloat(document.getElementById("literature").value);
+        let Eng = parseFloat(document.getElementById("english").value);
+        let areapoint = parseFloat(document.getElementById("KV").value);
+        document.getElementById("result").innerHTML = (Math + Lit + Eng + areapoint);
+        
+    }
+    
+    
+</script>
+</html>
