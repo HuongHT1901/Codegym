@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="guessNum()">Chơi</button>
+</body>
+<script>
+    function guessNum() {
+        let num = prompt("Hãy nhập số bất kỳ:")
+        let ran = Math.floor(Math.random() * num) + 1
+        let guess = prompt("Hãy nhập số đã đoán:")
+        while (guess != ran) {
+            guess = prompt("Hãy nhập lại số đã đoán:")
+        }
+        document.write("Chúc mừng bạn đã đoán đúng")
+}
+</script>
+</html>
