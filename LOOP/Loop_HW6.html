@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Hãy nhập số nguyên a: </h3><input type = "text" id = "a">
+    <h3>Hãy nhập số nguyên b: </h3><input type = "text" id = "b"><br><br>
+    <button onclick="Sum()">Tính tổng</button>
+    <h3>Tổng các số trong khoảng a và b là: <span id = "result"></span></h3>
+</body>
+<script>
+    function Sum() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let total = 0;
+        for (let n = a; n <= b; n++) {
+            total +=n  
+        }
+        document.getElementById("result").innerHTML = total;
+    }
+</script>
+</html>
