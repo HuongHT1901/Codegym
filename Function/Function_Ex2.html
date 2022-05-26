@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Temprature Converter</h1>
+    <h2>Type Fahrenheit Degree value</h2>
+    <h3>Fahrenheit degree</h3><input type="text" id = "FahrenheitDegree">
+    <button onclick="convertDegree()">Convert</button>
+    <h3>Celcius degree <span id="CelciusDegree"></span></h3>
+
+</body>
+<script>
+    function convertDegree() {
+        let num = parseFloat(document.getElementById("FahrenheitDegree").value)
+        let result = (num-32)/1.8
+        document.getElementById("CelciusDegree").innerHTML = result
+    }
+
+</script>
+</html>
