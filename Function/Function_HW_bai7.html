@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hãy nhập vào 3 số nguyên bất kỳ</p>
+    <input type="text" id = "num1">
+    <input type="text" id = "num2">
+    <input type="text" id = "num3"><br><br>
+    <button onclick="checkNum()">Check</button>
+    <p>Số nguyên nhỏ nhất là: <span id = "result"></span></p>
+</body>
+<script>
+    function checkNum() {
+        let num1 = document.getElementById("num1").value
+        let num2 = document.getElementById("num2").value
+        let num3 = document.getElementById("num3").value
+        if (num1 < num2 && num1 < num3) {
+            document.getElementById("result").innerHTML = num1
+        } else if (num2 < num3) {
+            document.getElementById("result").innerHTML = num2
+        } else {
+            document.getElementById("result").innerHTML = num3
+        }
+    }
+    
+</script>
+</html>
